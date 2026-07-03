@@ -57,10 +57,16 @@ pub async fn push_to_widget(
       }
     });
 
-    let response = state.http
-        .patch(format!("https://discord.com/api/v9/applications/{app_id}/users/{user_id}/identities/0/profile"))
+    state
+        .http
+        .patch(format!(
+            "https://discord.com/api/v9/applications/{app_id}/users/{user_id}/identities/0/profile"
+        ))
         .header("Authorization", format!("Bot {bot_token}"))
-        .header("User-Agent", "DiscordBot (https://github.com/discord/discord-api-docs, 1.0.0)")
+        .header(
+            "User-Agent",
+            "DiscordBot (https://github.com/discord/discord-api-docs, 1.0.0)",
+        )
         .header("Content-Type", "application/json")
         .json(&body)
         .send()

@@ -28,7 +28,7 @@ Before starting, install or create the following:
 ### 1. Clone the repository
 
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/v3nel/
 cd discordwakatimewidget
 ```
 
